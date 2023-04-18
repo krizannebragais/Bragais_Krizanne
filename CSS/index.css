@@ -1,11 +1,247 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
-body{
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    background-color: aquamarine;
+    font-family: 'DM Sans', sans-serif;
 }
-h1{
-    color: red;
+body{
+    background: linear-gradient(180deg, rgb(236, 234, 235) 0%, rgb(136, 95, 111) 100%);
+}
+section{
+}
+
+/*-- Navbar --*/
+
+/* section{
+    height: 100vh;
+} */
+.section1{
+}
+header{
+    position: relative;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: transparent;
+}
+.logo{
+    margin: 0px 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+.left{
+    font-size: 18px;
+    display: flex;
+    margin-right: 150px;
+}
+.right{
+    display: flex;
+}
+.link-container{
+    display: inline;
+    position: relative;
+    transition: ease-in-out .3s;
+    margin: 0px 5px;
+}
+.navbar li {
+    text-decoration: none;
+    color: black;
+    transition: ease-in-out .3s;
+    font-weight: bold;
+    margin: 0px 20px;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+#home{
+    border-bottom: solid 3px #c088b4; 
+}
+nav #toggle, nav label{
+    display: none;
+}
+.link-container a::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px #c088b4;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.link-container a:hover:after { transform: scaleX(1); }
+
+@media(max-width: 480px){
+    header{
+        justify-content: space-between;
+    }
+    .logo img{
+        height: 130px;
+        width: 130px;
+    }
+    .logo{
+        font-size: 7px;
+        position: relative;
+    }
+    nav .link-container{
+        border: none;
+        text-align: center;
+        padding: 0px;
+        margin: 10px 0px;
+    }
+    nav .menu{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        transition: .2s ease-in-out;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        position: absolute;
+        top: 79px;
+        left: 0;
+        background: white;
+    }
+    nav li a{
+        padding: 10px;    
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        color: red;
+    }
+    nav ul{
+        flex-direction: column;
+        position: absolute;
+        margin: 0px 20px ;
+        padding: 0;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    .right{
+        flex-direction: column;
+    }
+    nav .menu-toggle {
+        display: flex;
+        margin-right: 30px;
+        font-size: 25px;
+        justify-content: flex-end;
+        cursor: pointer;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+    }
+    
+    nav #toggle:checked ~ .menu-toggle .fa-bars {
+        display: none;
+    }
+    
+    nav #toggle:checked ~ .menu-toggle .fa-times {
+        display: block;
+    }
+    
+    nav #toggle:not(:checked) ~ .menu-toggle .fa-bars {
+        display: block;
+    }
+    
+    nav #toggle:not(:checked) ~ .menu-toggle .fa-times {
+        display: none;
+    }
+    nav #toggle:checked ~ .menu {
+        height: 35vh;
+        width: 100%;
+        border-bottom: 1px solid white;
+        z-index: 1;
+    }
+    nav #toggle:checked ~ .menu .link-container {
+        font-size: 15px;
+    }
+}
+
+.container{
+    width: 95%;
+    border-radius: 40px;
+    margin: auto;
+    background-color: #1f1f21;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1{
+    text-align: center;
+    font-size:70px;
+    margin: 0px;
+    padding-top: 80px;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills h3{
+    text-align: center;
+    display: inline-block;
+    margin: 10px 20px;
+}
+.description{
+    margin: 0px;
+    text-align: center;
+    color: rgb(141, 135, 135);
+    max-width: 800px;
+    padding: 0px 10px;
+}
+.btn-contact{
+    color: white;
+    border: none;
+    place-items: center;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 40px;
+    margin: 20px;
+    background: linear-gradient(180deg, rgb(211, 149, 173) 0%, rgb(136, 95, 111) 100%);
+    opacity: 1;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+}
+.picture{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.image-container{
+    margin: 20px 40px;
+    margin-bottom: 40px;
+    width: 500px;
+}
+.image-container img{
+    border-radius: 40px;
+    padding: 5px;
+    border: solid 3px #c088b4;
+    transition: .3s ease-in-out;
+}
+.image-container:hover img{
+    transform: scale(1.1);
+
+}
+
+.btn-contact:hover{
+    transform: scale(1.2);
+    cursor: pointer;
 }
