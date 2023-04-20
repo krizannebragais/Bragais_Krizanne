@@ -29,7 +29,6 @@ header{
     background-color: transparent;
 }
 .logo{
-    margin: 0px 50px;
     position: absolute;
     display: flex;
     align-items: center;
@@ -81,7 +80,7 @@ nav #toggle, nav label{
 }
 .link-container a:hover:after { transform: scaleX(1); }
 
-@media(max-width: 480px){
+@media(max-width: 640px){
     header{
         justify-content: space-between;
     }
@@ -110,7 +109,7 @@ nav #toggle, nav label{
         position: absolute;
         top: 79px;
         left: 0;
-        background: white;
+        background: linear-gradient(180deg, rgb(236, 234, 235) 0%, rgb(136, 95, 111) 100%);
     }
     nav li a{
         padding: 10px;    
@@ -161,8 +160,8 @@ nav #toggle, nav label{
     nav #toggle:checked ~ .menu {
         height: 35vh;
         width: 100%;
-        border-bottom: 1px solid white;
         z-index: 1;
+        border-top: 1px solid black;
     }
     nav #toggle:checked ~ .menu .link-container {
         font-size: 15px;
@@ -170,16 +169,18 @@ nav #toggle, nav label{
 }
 
 .container{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     width: 95%;
     border-radius: 40px;
     margin: auto;
-    background-color: #1f1f21;
+    background-color: #3e2642;
     position: relative;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 25px;
 }
 .container h1{
     text-align: center;
@@ -187,16 +188,7 @@ nav #toggle, nav label{
     margin: 0px;
     padding-top: 80px;
 }
-.skills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.skills h3{
-    text-align: center;
-    display: inline-block;
-    margin: 10px 20px;
-}
+
 .description{
     margin: 0px;
     text-align: center;
@@ -219,21 +211,19 @@ nav #toggle, nav label{
     transition: .3s ease-in-out;
 }
 .picture{
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 .image-container{
-    margin: 20px 40px;
-    margin-bottom: 40px;
-    width: 500px;
+    width: 580px;
+    margin-inline: 20px;
 }
 .image-container img{
     border-radius: 40px;
     padding: 5px;
-    border: solid 3px #c088b4;
     transition: .3s ease-in-out;
 }
 .image-container:hover img{
@@ -244,4 +234,79 @@ nav #toggle, nav label{
 .btn-contact:hover{
     transform: scale(1.2);
     cursor: pointer;
+}
+@media(max-width: 640px) {
+    .container{
+        padding-bottom: 0px;
+    }
+    .logo{
+        margin-left: 20px;
+    }
+    .container h1{
+        font-size: 40px;
+    }
+    .container h3{
+        font-size: 15px;
+    }
+    .container p{
+        font-size: 13px;
+    }
+    .image-container{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+.container2{
+    width: 95%;
+    display: flex;
+    margin-inline: auto;
+    margin-block: 30px;
+    justify-content: space-between;
+}
+.short-intro{
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+}
+.short-intro h1{
+    margin-bottom: 10px;
+    color: #3e2642;
+    text-align: center;
+}
+.image-container2{
+    width: 180px;
+}
+.image-container2 img{
+    border-radius: 200px;
+}
+.description2{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 20px;
+    background-color: #3e2642;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: justify;
+}
+@media(max-width: 640px){
+    .container2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .short-intro{
+        margin-right: 0px;
+        align-items: center;
+    }
+    .short-intro h1{
+        margin-bottom: 20px;
+    }
+    .description2{
+        font-size: 10px;
+        text-align: justify;
+    }
+    .image-container2{
+        margin-bottom: 20px;
+    }
 }
