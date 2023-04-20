@@ -275,10 +275,7 @@ nav #toggle, nav label{
     text-align: center;
 }
 .image-container2{
-    width: 180px;
-}
-.image-container2 img{
-    border-radius: 200px;
+    width: 120px;
 }
 .description2{
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -286,7 +283,7 @@ nav #toggle, nav label{
     background-color: #3e2642;
     padding: 20px;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     text-align: justify;
 }
 @media(max-width: 640px){
