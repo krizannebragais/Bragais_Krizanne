@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
 }
-body{
+
+body {
     background: linear-gradient(180deg, rgb(236, 234, 235) 0%, rgb(136, 95, 111) 100%);
 }
-section{
+
+ul, ol{
+    list-style: none;
 }
 
 /*-- Navbar --*/
@@ -17,9 +21,8 @@ section{
 /* section{
     height: 100vh;
 } */
-.section1{
-}
-header{
+
+header {
     position: relative;
     height: 80px;
     display: flex;
@@ -28,32 +31,37 @@ header{
     z-index: 1;
     background-color: transparent;
 }
-.logo{
+
+.logo {
     position: absolute;
     display: flex;
     align-items: center;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
     align-items: center;
     padding: 0px;
 }
-.left{
+
+.left {
     font-size: 18px;
     display: flex;
     margin-right: 150px;
 }
-.right{
+
+.right {
     display: flex;
 }
-.link-container{
+
+.link-container {
     display: inline;
     position: relative;
     transition: ease-in-out .3s;
     margin: 0px 5px;
 }
+
 .navbar li {
     text-decoration: none;
     color: black;
@@ -61,44 +69,56 @@ nav ul{
     font-weight: bold;
     margin: 0px 20px;
 }
-.navbar a{
+
+.navbar a {
     text-decoration: none;
     color: black;
 }
-#home{
-    border-bottom: solid 3px #c088b4; 
+
+#home {
+    border-bottom: solid 3px #c088b4;
 }
-nav #toggle, nav label{
+
+nav #toggle,
+nav label {
     display: none;
 }
-.link-container a::after{
-    display:block;
+
+.link-container a::after {
+    display: block;
     content: '';
-    border-bottom: solid 3px #c088b4;  
-    transform: scaleX(0);  
+    border-bottom: solid 3px #c088b4;
+    transform: scaleX(0);
     transition: transform 250ms ease-in-out;
 }
-.link-container a:hover:after { transform: scaleX(1); }
 
-@media(max-width: 640px){
-    header{
+.link-container a:hover:after {
+    transform: scaleX(1);
+}
+
+@media(max-width: 640px) {
+    header {
         justify-content: space-between;
     }
-    .logo img{
+
+    .logo img {
         height: 130px;
         width: 130px;
     }
-    .logo{
+
+    .logo {
         font-size: 7px;
         position: relative;
     }
-    nav .link-container{
+
+    nav .link-container {
         border: none;
         text-align: center;
         padding: 0px;
         margin: 10px 0px;
     }
-    nav .menu{
+
+    nav .menu {
         display: flex;
         align-items: center;
         justify-content: right;
@@ -111,27 +131,31 @@ nav #toggle, nav label{
         left: 0;
         background: linear-gradient(180deg, rgb(236, 234, 235) 0%, rgb(136, 95, 111) 100%);
     }
-    nav li a{
-        padding: 10px;    
-        font-size: 20px;
+
+    nav li a {
+        font-size: 15px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
-        color: red;
     }
-    nav ul{
+
+    nav ul {
         flex-direction: column;
         position: absolute;
-        margin: 0px 20px ;
+        margin: 0px 20px;
         padding: 0;
     }
-    .left{
+
+    .left {
         display: flex;
         flex-direction: column;
         margin: 0px;
     }
-    .right{
+
+    .right {
         flex-direction: column;
     }
+
     nav .menu-toggle {
         display: flex;
         margin-right: 30px;
@@ -141,34 +165,36 @@ nav #toggle, nav label{
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
     }
-    
-    nav #toggle:checked ~ .menu-toggle .fa-bars {
+
+    nav #toggle:checked~.menu-toggle .fa-bars {
         display: none;
     }
-    
-    nav #toggle:checked ~ .menu-toggle .fa-times {
+
+    nav #toggle:checked~.menu-toggle .fa-times {
         display: block;
     }
-    
-    nav #toggle:not(:checked) ~ .menu-toggle .fa-bars {
+
+    nav #toggle:not(:checked)~.menu-toggle .fa-bars {
         display: block;
     }
-    
-    nav #toggle:not(:checked) ~ .menu-toggle .fa-times {
+
+    nav #toggle:not(:checked)~.menu-toggle .fa-times {
         display: none;
     }
-    nav #toggle:checked ~ .menu {
-        height: 35vh;
+
+    nav #toggle:checked~.menu {
+        height: 50vh;
         width: 100%;
         z-index: 1;
         border-top: 1px solid black;
     }
-    nav #toggle:checked ~ .menu .link-container {
+
+    nav #toggle:checked~.menu .link-container {
         font-size: 15px;
     }
 }
 
-.container{
+.container {
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     width: 95%;
     border-radius: 40px;
@@ -182,21 +208,23 @@ nav #toggle, nav label{
     align-items: center;
     padding-bottom: 25px;
 }
-.container h1{
+
+.container h1 {
     text-align: center;
-    font-size:70px;
+    font-size: 70px;
     margin: 0px;
     padding-top: 80px;
 }
 
-.description{
+.description {
     margin: 0px;
     text-align: center;
     color: rgb(141, 135, 135);
     max-width: 800px;
     padding: 0px 10px;
 }
-.btn-contact{
+
+.btn-contact {
     color: white;
     border: none;
     place-items: center;
@@ -210,74 +238,88 @@ nav #toggle, nav label{
     border-radius: 50px;
     transition: .3s ease-in-out;
 }
-.picture{
+
+.picture {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     justify-content: center;
     align-items: center;
 }
-.image-container{
+
+.image-container {
     width: 580px;
     margin-inline: 20px;
 }
-.image-container img{
+
+.image-container img {
     border-radius: 40px;
     padding: 5px;
     transition: .3s ease-in-out;
 }
-.image-container:hover img{
+
+.image-container:hover img {
     transform: scale(1.1);
 
 }
 
-.btn-contact:hover{
+.btn-contact:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
+
 @media(max-width: 640px) {
-    .container{
+    .container {
         padding-bottom: 0px;
     }
-    .logo{
+
+    .logo {
         margin-left: 20px;
     }
-    .container h1{
+
+    .container h1 {
         font-size: 40px;
     }
-    .container h3{
+
+    .container h3 {
         font-size: 15px;
     }
-    .container p{
+
+    .container p {
         font-size: 13px;
     }
-    .image-container{
+
+    .image-container {
         margin-bottom: 10px;
         width: 100%;
     }
 }
 
-.container2{
+.container2 {
     width: 95%;
     display: flex;
     margin-inline: auto;
     margin-block: 30px;
     justify-content: space-between;
 }
-.short-intro{
+
+.short-intro {
     display: flex;
     flex-direction: column;
     margin-right: 70px;
 }
-.short-intro h1{
+
+.short-intro h1 {
     margin-bottom: 10px;
     color: #3e2642;
     text-align: center;
 }
-.image-container2{
+
+.image-container2 {
     width: 120px;
 }
-.description2{
+
+.description2 {
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     border-radius: 20px;
     background-color: #3e2642;
@@ -286,24 +328,222 @@ nav #toggle, nav label{
     font-size: 15px;
     text-align: justify;
 }
-@media(max-width: 640px){
-    .container2{
+
+@media(max-width: 640px) {
+    .container2 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .short-intro{
+
+    .short-intro {
         margin-right: 0px;
         align-items: center;
     }
-    .short-intro h1{
+
+    .short-intro h1 {
         margin-bottom: 20px;
     }
-    .description2{
+
+    .description2 {
         font-size: 10px;
         text-align: justify;
     }
-    .image-container2{
+
+    .image-container2 {
         margin-bottom: 20px;
     }
+}
+
+.container3{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    width: 95%;
+    border-radius: 40px;
+    margin: auto;
+    background-color: #3e2642;
+    color: white;
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+.contain{
+    padding: 50px 50px;
+    position: relative;
+    width: 50%;
+}
+.text-box{
+    padding: 20px 30px;
+    background: linear-gradient(180deg, rgb(211, 149, 173) 0%, rgb(136, 95, 111) 100%);
+    position: relative;
+    border-radius: 40px;
+}
+.left-contain{
+    left: 0;
+}
+.right-contain{
+    left: 50%;
+}
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 1;
+}
+.text-box img{
+    display: flex;
+}
+.school-logo img{
+    border-radius: 50%;
+    margin: auto;
+    width: 250px;
+}
+.left-contain-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgb(207, 192, 201);
+    right: -15px;
+}
+.right-contain-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgb(207, 192, 201);
+    left: -15px;
+}
+.contain #small-logo-left{
+    position: absolute;
+    width: 60px;
+    border-radius: 50%;
+    left: 95%;
+    top: 80px;
+    z-index: 10;
+}
+.contain #small-logo-right{
+    position: absolute;
+    width: 60px;
+    border-radius: 50%;
+    right: 95%;
+    top: 80px;
+    z-index: 10;
+}
+
+@media (max-width: 640px) {
+    .text-box h2{
+        font-size: 15px;
+    }
+    .text-box h3{
+        font-size: 12px;
+    }
+    .contain{
+        padding: 20px 40px;
+    }
+    .contain #small-logo-left{
+        position: absolute;
+        width: 40px;
+        border-radius: 50%;
+        left: 91%;
+        top: 110px;
+        z-index: 10;
+    }
+    .contain #small-logo-right{
+        position: absolute;
+        width: 40px;
+        border-radius: 50%;
+        right: 91%;
+        top: 110px;
+        z-index: 10;
+    }
+    .contain{
+        padding: 10px;
+    }
+    .text-box{
+        padding: 15px;
+    }
+    .left-contain-arrow{
+       display: none;
+    }
+    .right-contain-arrow{
+        display: none;
+    }
+    .school-logo img{
+        max-width: 150px;
+    }
+}
+.projects{
+    margin-inline: 40px;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+}
+.proj-name{
+    text-align: center;
+}
+.proj-name h1{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    color: white;
+    background-color: #3e2642;
+    padding-block: 20px;
+    margin-inline: 40px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+.proj-name p{
+    font-size: 20px;
+}
+.image-container3 img{
+    object-fit: cover;
+    width: 400px;
+    height: 250px;
+    border-radius: 40px;
+    transition: .3s ease-in-out;
+}
+.image-container3{
+    border-radius: 40px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+footer{
+    text-align: center;
+    margin-block: 30px;
+    padding: 10px;
+    color: #3e2642;
+}
+.image-container3 img:hover{
+    transform: scale(1.1);
+}
+
+@media(max-width: 460px){
+    .projects{
+        flex-direction: column;
+    }
+    .image-container3 img{
+        width: 100%;
+        height: 200px;
+    }
+    .image-container3{
+        margin-bottom: 20px;
+    }
+    .proj-name h1{
+        font-size: 15px;
+    }
+    .proj-name p{
+        font-size: 15px;
+    }
+   
 }
